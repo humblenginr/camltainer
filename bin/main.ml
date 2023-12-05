@@ -6,22 +6,6 @@ external sethostname : string -> int -> unit
    = "unix_sethostname"
 
 
-        (*
-            int namespaces = CLONE_NEWUTS|CLONE_NEWPID|CLONE_NEWNS|CLONE_NEWUSER;
-            unshare(namespaces);
-            int pid = fork();
-            if (pid != 0) {
-                printf("parent pid: %i\n", getpid());
-                int status;
-                waitpid(-1, &status, 0);
-                return status;
-            }
-            printf("My pid: %i\n", getpid());
-            char *args[]={"",NULL};
-            sethostname("container",9);
-            execv("/bin/bash",args);
-        *)
-
 let () = 
         unshare 0;
         let pid = Unix.fork () in
