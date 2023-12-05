@@ -1,0 +1,6 @@
+(executable
+ (public_name camltainer)
+ (name main)
+ (libraries camltainer unix)
+ (foreign_stubs (language c) (names syscalls) (include_dirs /usr/lib/ocaml/caml) )
+ )
