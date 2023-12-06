@@ -2,5 +2,5 @@
  (public_name camltainer)
  (name main)
  (libraries camltainer unix)
- (foreign_stubs (language c) (names syscalls) (include_dirs /usr/lib/ocaml/caml) )
+ (foreign_stubs (language c) (names syscalls) (include_dirs /Users/humblenginr/.opam/5.1.0/lib/ocaml/caml) )
  )
