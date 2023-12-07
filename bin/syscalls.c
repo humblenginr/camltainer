@@ -22,7 +22,7 @@
 CAMLprim value unix_unshare(value flags) 
 {
 	CAMLparam1 (flags);
-	int namespaces = CLONE_NEWUTS|CLONE_NEWPID|CLONE_NEWNS;
+	int namespaces = CLONE_NEWUTS|CLONE_NEWPID|CLONE_NEWNS|CLONE_FS|CLONE_FILES;
 	unshare(namespaces);
 	CAMLreturn (Val_unit);
 }
